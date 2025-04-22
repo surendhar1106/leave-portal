@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leave Application Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(to right, #3758d0, #ffffff);
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen font-sans text-white">
+
+  <!-- Login Screen -->
+  <div id="loginPage" class="glass p-8 rounded-2xl shadow-2xl max-w-sm w-full">
+    <h2 class="text-3xl font-bold text-center mb-6">Leave Application Portal</h2>
+    <form onsubmit="login(event)">
+      <div class="mb-4">
+        <label for="username" class="block mb-2 text-sm">Username</label>
+        <input
+          type="text"
+          id="username"
+          class="w-full px-4 py-2 rounded bg-white bg-opacity-10 placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-white"
+          placeholder="Enter your username"
+          required
+        />
+      </div>
+      <div class="mb-6">
+        <label for="password" class="block mb-2 text-sm">Password</label>
+        <input
+          type="password"
+          id="password"
+          class="w-full px-4 py-2 rounded bg-white bg-opacity-10 placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-white"
+          placeholder="Enter your password"
+          required
+        />
+      </div>
+      <button
+        type="submit"
+        class="w-full bg-white text-blue-700 font-semibold py-2 rounded hover:bg-gray-200 transition"
+      >
+        Login
+      </button>
+    </form>
+  </div>
+
+  <!-- Faculty Dashboard -->
+  <div id="dashboard" class="hidden glass p-8 rounded-2xl shadow-2xl w-full max-w-2xl space-y-6">
+    <h2 class="text-2xl font-bold mb-4">Faculty Dashboard</h2>
+    <div class="bg-white bg-opacity-10 p-4 rounded-lg space-y-2">
+      <p><strong>Name:</strong> Dr.Surendhar</p>
+      <p><strong>Staff ID:</strong> 2024ucs1156</p>
+      <p><strong>Active Years:</strong> 2024 - Present</p>
+    </div>
+
+    <div class="bg-white bg-opacity-10 p-4 rounded-lg">
+      <h3 class="text-lg font-semibold mb-3">Leave Requests</h3>
+      <div id="requestsContainer" class="space-y-4"></div>
+    </div>
+  </div>
+
+  <script>
+    const leaveRequests = [
+      { id: 1, requester: "Nithiswer", reason: "Medical Leave", date: "2025-04-20 to 2025-04-25", status: "Pending" },
+      { id: 2, requester: "Bharath", reason: "Conference", date: "2025-05-01 to 2025-05-03", status: "Pending" }
+    ];
+
+    function login(event) {
+      event.preventDefault();
+      document.getElementById('loginPage').classList.add('hidden');
+      document.getElementById('dashboard').classList.remove('hidden');
+      renderRequests();
+    }
+
+    function renderRequests() {
+      const container = document.getElementById("requestsContainer");
+      container.innerHTML = "";
+
+      leaveRequests.forEach(req => {
+        const div = document.createElement("div");
+        div.className = "p-4 border border-white border-opacity-30 rounded-lg bg-white bg-opacity-5";
+        div.innerHTML = `
+          <p><strong>Requester:</strong> ${req.requester}</p>
+          <p><strong>Reason:</strong> ${req.reason}</p>
+          <p><strong>Date:</strong> ${req.date}</p>
+          <p><strong>Status:</strong> <span id="status-${req.id}">${req.status}</span></p>
+          ${req.status === "Pending" ? `
+            <div class="mt-2 space-x-2">
+              <button class="bg-green-600 px-4 py-1 rounded hover:bg-green-700" onclick="handleAction(${req.id}, 'Approved')">Approve</button>
+              <button class="bg-red-600 px-4 py-1 rounded hover:bg-red-700" onclick="handleAction(${req.id}, 'Rejected')">Reject</button>
+            </div>` : ""
+        }
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    function handleAction(id, action) {
+      const req = leaveRequests.find(r => r.id === id);
+      if (req) {
+        req.status = action;
+        renderRequests();
+      }
+    }
+  </script>
+</body>
+</html>
