@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Leave Portal</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Welcome to the Dashboard</h2>
+    <p>Raise your leave request below:</p>
+    <form action="/submitrequest" method="POST">
+      <textarea name="reason" placeholder="Reason for leave" required></textarea><br>
+      <label>From:</label> <input type="date" name="from_date" required><br>
+      <label>To:</label> <input type="date" name="to_date" required><br>
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+</body>
+</html>
