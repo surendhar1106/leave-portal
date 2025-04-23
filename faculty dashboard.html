@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Faculty Dashboard</title>
+  <link rel="stylesheet" href="faculty dashboard.css">
 </head>
-<body style="margin: 0; padding: 40px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #1e3a8a; display: flex; align-items: center; justify-content: center; min-height: 100vh;">
+<body>
 
-  <div style="background-color: #ffffff; color: #111827; border-radius: 20px; padding: 30px; width: 90%; max-width: 550px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);">
+  <div class="dashboard-container">
 
-    <h2 style="text-align: center; margin-bottom: 25px; color: #1e3a8a;">Faculty Dashboard</h2>
+    <h2 class="dashboard-title">Faculty Dashboard</h2>
 
     <!-- Faculty Info Section -->
-    <div style="margin-bottom: 25px; background-color: #f1f5f9; padding: 20px; border-radius: 12px;">
+    <div class="info-box">
       <p><strong>Faculty Name:</strong> Surendhar R</p>
       <p><strong>Staff ID:</strong> F2024UCS1001</p>
       <p><strong>Years Active:</strong> 5 years</p>
@@ -19,41 +20,39 @@
     </div>
 
     <!-- Leave Requests Header -->
-    <h3 style="text-align: center; margin-bottom: 20px; color: #1e40af;">Leave Requests</h3>
+    <h3 class="leave-title">Leave Requests</h3>
 
-    <!-- Leave Request 1 -->
-    <div style="background-color: #f8fafc; border-left: 6px solid #3b82f6; border-radius: 12px; padding: 15px 20px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <!-- Leave Request Items -->
+    <div class="leave-request">
       <p><strong>Name:</strong> Bharath</p>
       <p><strong>From:</strong> 2025-04-10</p>
       <p><strong>To:</strong> 2025-04-12</p>
       <p><strong>Reason:</strong> Medical Checkup</p>
-      <div style="margin-top: 12px;">
-        <button style="background-color: #16a34a; color: white; padding: 8px 16px; border: none; border-radius: 6px; margin-right: 10px; cursor: pointer;">Approve</button>
-        <button style="background-color: #dc2626; color: white; padding: 8px 16px; border: none; border-radius: 6px; cursor: pointer;">Reject</button>
+      <div class="action-buttons">
+        <button class="approve">Approve</button>
+        <button class="reject">Reject</button>
       </div>
     </div>
 
-    <!-- Leave Request 2 -->
-    <div style="background-color: #f8fafc; border-left: 6px solid #3b82f6; border-radius: 12px; padding: 15px 20px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <div class="leave-request">
       <p><strong>Name:</strong> Priya</p>
       <p><strong>From:</strong> 2025-04-05</p>
       <p><strong>To:</strong> 2025-04-07</p>
       <p><strong>Reason:</strong> Family Event</p>
-      <div style="margin-top: 12px;">
-        <button style="background-color: #16a34a; color: white; padding: 8px 16px; border: none; border-radius: 6px; margin-right: 10px; cursor: pointer;">Approve</button>
-        <button style="background-color: #dc2626; color: white; padding: 8px 16px; border: none; border-radius: 6px; cursor: pointer;">Reject</button>
+      <div class="action-buttons">
+        <button class="approve">Approve</button>
+        <button class="reject">Reject</button>
       </div>
     </div>
 
-    <!-- Leave Request 3 -->
-    <div style="background-color: #f8fafc; border-left: 6px solid #3b82f6; border-radius: 12px; padding: 15px 20px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+    <div class="leave-request">
       <p><strong>Name:</strong> Karthik</p>
       <p><strong>From:</strong> 2025-03-15</p>
       <p><strong>To:</strong> 2025-03-18</p>
       <p><strong>Reason:</strong> Personal</p>
-      <div style="margin-top: 12px;">
-        <button style="background-color: #16a34a; color: white; padding: 8px 16px; border: none; border-radius: 6px; margin-right: 10px; cursor: pointer;">Approve</button>
-        <button style="background-color: #dc2626; color: white; padding: 8px 16px; border: none; border-radius: 6px; cursor: pointer;">Reject</button>
+      <div class="action-buttons">
+        <button class="approve">Approve</button>
+        <button class="reject">Reject</button>
       </div>
     </div>
 
