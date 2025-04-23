@@ -9,22 +9,26 @@
 
   <div class="login-container">
     <h2>Student Login - Leave Application Portal</h2>
+    <form action="/slogin" method="POST">
 
-    <div class="form-group">
-      <label for="studentid">Student ID</label>
-      <input type="text" id="studentid" placeholder="Enter Student ID">
-    </div>
+      <div class="form-group">
+        <label for="studentid">Student ID</label>
+        <input type="text"name="studentid"  id="studentid" placeholder="{{ username_placeholder or 'Enter Student ID' }}" 
+        {% if error %} style="border: 2px solid red;" {% endif %}  required>
+      </div>
 
-    <div class="form-group">
-      <label for="password">Password</label>
-      <input type="password" id="password" placeholder="Enter Password">
-    </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password"name="password"  id="password"  placeholder="{{ password_placeholder or 'Enter Password' }}" 
+        {% if error %} style="border: 2px solid red;" {% endif %}  required>
+      </div>
 
-    <button class="login-btn">Login</button>
+      <button type="submit" name="user_type" value="student" class="login-btn">Login</button>
 
-    <div class="or-separator">-- OR --</div>
+      <div class="or-separator">-- OR --</div>
 
-    <button class="alt-login-btn">Staff Login</button>
+      <button type="submit"name="user_type" value="staff" class="alt-login-btn" formnovalidate>Staff Login</button>
+  </form>
   </div>
 
 </body>
