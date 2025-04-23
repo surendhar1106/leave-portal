@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for,session
+from flask import Flask, render_template, request, redirect, url_for, session
 
 app = Flask(__name__)
 
@@ -7,7 +7,7 @@ app.secret_key = 'y'
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('student_login.html')
 
 @app.route('/login', methods=['POST'])
 def login():
