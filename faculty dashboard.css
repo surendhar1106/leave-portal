@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e3a8a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .dashboard-container {
+    background-color: #ffffff;
+    color: #111827;
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+    max-width: 550px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dashboard-title {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1e3a8a;
+  }
+  
+  .info-box {
+    margin-bottom: 25px;
+    background-color: #f1f5f9;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .leave-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1e40af;
+  }
+  
+  .leave-request {
+    background-color: #f8fafc;
+    border-left: 6px solid #3b82f6;
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+  
+  .action-buttons {
+    margin-top: 12px;
+  }
+  
+  button.approve {
+    background-color: #16a34a;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  button.reject {
+    background-color: #dc2626;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  

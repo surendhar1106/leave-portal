@@ -4,55 +4,59 @@
   <meta charset="UTF-8">
   <title>Faculty Dashboard</title>
 </head>
-<body bgcolor="white">
+<body style="font-family: Arial, sans-serif; background-color: #1e3a8a; color: #000; display: flex; align-items: center; justify-content: center; padding: 40px; min-height: 100vh; margin: 0;">
 
-  <br><br><br>
-  <center>
-    <!-- Faculty Information -->
-    <h2>Faculty Dashboard</h2>
-    <p><strong>Name:</strong> Dr. Surendhar</p>
-    <p><strong>Years Active:</strong> 2022 - Present</p>
-    <p><strong>No. of Students:</strong> 42</p>
+  <div style="background-color: #ffffff; color: #000; border-radius: 15px; padding: 20px; width: 90%; max-width: 500px;">
 
-    <br>
+    <h2 style="text-align: center; margin-bottom: 20px;">Faculty Dashboard</h2>
 
-    <!-- Outer Blue Box -->
-    <table width="500" cellpadding="20" bgcolor="#4a90e2" cellspacing="0">
-      <tr>
-        <td>
+    <!-- Faculty Info -->
+    <div style="margin-bottom: 20px;">
+      <p><strong>Faculty Name:</strong> Surendhar R</p>
+      <p><strong>Staff ID:</strong> F2024UCS1001</p>
+      <p><strong>Years of Active:</strong> 5 years</p>
+      <p><strong>No of Students:</strong> 45</p>
+    </div>
 
-          <center><h3>Leave Requests</h3></center>
+    <!-- Leave Requests -->
+    <div>
+      <h3 style="text-align: center; margin-bottom: 15px;">Leave Requests</h3>
 
-          <!-- Inner White Box 1 -->
-          <table width="100%" cellpadding="10" bgcolor="white">
-            <tr>
-              <td>
-                <p><strong>Student:</strong> Bharath</p>
-                <p><strong>From:</strong> 2025-04-20</p>
-                <p><strong>To:</strong> 2025-04-22</p>
-                <p><strong>Reason:</strong> Sick Leave</p>
-              </td>
-            </tr>
-          </table>
+      <div style="background-color: #f5f5f5; border-radius: 10px; padding: 10px; margin-bottom: 15px;">
+        <p><strong>Name:</strong> Bharath</p>
+        <p><strong>From:</strong> 2025-04-10</p>
+        <p><strong>To:</strong> 2025-04-12</p>
+        <p><strong>Reason:</strong> Medical Checkup</p>
+        <div style="margin-top: 10px;">
+          <button style="background-color: green; color: white; border: none; padding: 5px 10px; border-radius: 5px; margin-right: 10px;">Approve</button>
+          <button style="background-color: red; color: white; border: none; padding: 5px 10px; border-radius: 5px;">Reject</button>
+        </div>
+      </div>
 
-          <br>
+      <div style="background-color: #f5f5f5; border-radius: 10px; padding: 10px; margin-bottom: 15px;">
+        <p><strong>Name:</strong> Priya</p>
+        <p><strong>From:</strong> 2025-04-05</p>
+        <p><strong>To:</strong> 2025-04-07</p>
+        <p><strong>Reason:</strong> Family Event</p>
+        <div style="margin-top: 10px;">
+          <button style="background-color: green; color: white; border: none; padding: 5px 10px; border-radius: 5px; margin-right: 10px;">Approve</button>
+          <button style="background-color: red; color: white; border: none; padding: 5px 10px; border-radius: 5px;">Reject</button>
+        </div>
+      </div>
 
-          <!-- Inner White Box 2 -->
-          <table width="100%" cellpadding="10" bgcolor="white">
-            <tr>
-              <td>
-                <p><strong>Student:</strong> Nithiswer</p>
-                <p><strong>From:</strong> 2025-05-01</p>
-                <p><strong>To:</strong> 2025-05-03</p>
-                <p><strong>Reason:</strong> Family Emergency</p>
-              </td>
-            </tr>
-          </table>
+      <div style="background-color: #f5f5f5; border-radius: 10px; padding: 10px; margin-bottom: 15px;">
+        <p><strong>Name:</strong> Karthik</p>
+        <p><strong>From:</strong> 2025-03-15</p>
+        <p><strong>To:</strong> 2025-03-18</p>
+        <p><strong>Reason:</strong> Personal</p>
+        <div style="margin-top: 10px;">
+          <button style="background-color: green; color: white; border: none; padding: 5px 10px; border-radius: 5px; margin-right: 10px;">Approve</button>
+          <button style="background-color: red; color: white; border: none; padding: 5px 10px; border-radius: 5px;">Reject</button>
+        </div>
+      </div>
 
-        </td>
-      </tr>
-    </table>
+    </div>
+  </div>
 
-  </center>
 </body>
 </html>
