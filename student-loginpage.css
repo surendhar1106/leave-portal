@@ -1,0 +1,91 @@
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e3a8a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Login container styling */
+  .login-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 350px;
+  }
+  
+  /* Heading styling */
+  .login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1e3a8a;
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Label styling */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Input fields styling */
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Login button styling */
+  .login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  /* Hover effect for login button */
+  .login-btn:hover {
+    background-color: #003060;
+  }
+  
+  /* OR separator styling */
+  .or-separator {
+    text-align: center;
+    margin: 15px 0;
+    color: #888;
+  }
+  
+  /* Alternative login button styling */
+  .alt-login-btn {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px dashed #004080;
+    background-color: transparent;
+    color: #004080;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Hover effect for alternative login button */
+  .alt-login-btn:hover {
+    background-color: #e6f0ff;
+  }
+  
