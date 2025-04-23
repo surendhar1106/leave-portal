@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Apply for Leave</title>
+  <link rel="stylesheet" href="apply-leave.css">
 </head>
-<body style="margin: 0; padding: 40px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #1e3a8a; display: flex; align-items: center; justify-content: center; min-height: 100vh;">
+<body>
 
-  <div style="background-color: #ffffff; color: #111827; border-radius: 20px; padding: 30px; width: 90%; max-width: 600px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);">
+  <div class="form-container">
 
-    <h2 style="text-align: center; margin-bottom: 25px; color: #1e3a8a;">Apply for Leave</h2>
+    <h2 class="form-header">Apply for Leave</h2>
 
-    <form style="display: flex; flex-direction: column; gap: 15px;">
+    <form class="leave-form">
         <!-- Leave Type -->
-      <div>
-        <label for="leave-type" style="display: block; margin-bottom: 5px;"><strong>Leave Type:</strong></label>
-        <select id="leave-type" name="leave-type" style="width: 104%; padding: 10px; cursor: pointer; border-radius: 8px; border: 1px solid #ccc;">
+      <div class="form-group">
+        <label for="leave-type"><strong>Leave Type:</strong></label>
+        <select style="width: 104%;" id="leave-type" name="leave-type">
           <option value="casual">Casual Leave</option>
           <option value="sick">Sick Leave</option>
           <option value="duty">On Duty</option>
@@ -23,38 +24,38 @@
       </div>
 
       <!-- From Date -->
-      <div>
-        <label for="from-date" style="display: block; margin-bottom: 5px;"><strong>From Date:</strong></label>
-        <input type="date" id="from-date" name="from-date" style="width: 100%; padding: 10px; cursor: pointer;  border-radius: 8px; border: 1px solid #ccc;">
+      <div class="form-group">
+        <label for="from-date"><strong>From Date:</strong></label>
+        <input type="date" id="from-date" name="from-date">
       </div>
 
       <!-- To Date -->
-      <div>
-        <label for="to-date" style="display: block; margin-bottom: 5px;"><strong>To Date:</strong></label>
-        <input type="date" id="to-date" name="to-date" style="width: 100%; padding: 10px; cursor: pointer;  border-radius: 8px; border: 1px solid #ccc;">
+      <div class="form-group">
+        <label for="to-date"><strong>To Date:</strong></label>
+        <input type="date" id="to-date" name="to-date">
       </div>
 
       <!-- From Time -->
-      <div>
-        <label for="from-time" style="display: block; margin-bottom: 5px;"><strong>From Time:</strong></label>
-        <input type="time" id="from-time" name="from-time" style="width: 100%; padding: 10px; cursor: pointer;  border-radius: 8px; border: 1px solid #ccc;">
+      <div class="form-group">
+        <label for="from-time"><strong>From Time:</strong></label>
+        <input type="time" id="from-time" name="from-time">
       </div>
 
       <!-- To Time -->
-      <div>
-        <label for="to-time" style="display: block; margin-bottom: 5px;"><strong>To Time:</strong></label>
-        <input type="time" id="to-time" name="to-time" style="width: 100%; padding: 10px; cursor: pointer;  border-radius: 8px; border: 1px solid #ccc;">
+      <div class="form-group">
+        <label for="to-time"><strong>To Time:</strong></label>
+        <input type="time" id="to-time" name="to-time">
       </div>
 
       <!-- Reason -->
-      <div>
-        <label for="reason" style="display: block; margin-bottom: 5px;"><strong>Reason:</strong></label>
-        <textarea id="reason" name="reason" rows="4" style="width: 100%; padding: 10px; cursor: pointer;  border-radius: 8px; border: 1px solid #ccc; resize: none;"></textarea>
+      <div class="form-group">
+        <label for="reason"><strong>Reason:</strong></label>
+        <textarea id="reason" name="reason" rows="4"></textarea>
       </div>
 
       <!-- Submit Button -->
-      <div style="text-align: center; margin-top: 20px;">
-        <button type="submit" style="background-color: #1d4ed8; color: white; padding: 12px 25px; cursor: pointer;  font-size: 16px; border: none; border-radius: 8px; cursor: pointer;">Submit Leave Request</button>
+      <div class="submit-btn">
+        <button type="submit">Submit Leave Request</button>
       </div>
 
     </form>

@@ -1,0 +1,68 @@
+/* Global styles */
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e3a8a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Form Container */
+.form-container {
+    background-color: #ffffff;
+    color: #111827;
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Header */
+.form-header {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1e3a8a;
+}
+
+/* Form Group (for labels and inputs) */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group select,
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* Submit Button */
+.submit-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.submit-btn button {
+    background-color: #1d4ed8;
+    color: white;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+}
