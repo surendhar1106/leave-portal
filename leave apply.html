@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Apply for Leave</title>
+</head>
+<body style="margin: 0; padding: 40px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #1e3a8a; display: flex; align-items: center; justify-content: center; min-height: 100vh;">
+
+  <div style="background-color: #ffffff; color: #111827; border-radius: 20px; padding: 30px; width: 90%; max-width: 600px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);">
+
+    <h2 style="text-align: center; margin-bottom: 25px; color: #1e3a8a;">Apply for Leave</h2>
+
+    <form style="display: flex; flex-direction: column; gap: 15px;">
+
+      <!-- From Date -->
+      <div>
+        <label for="from-date" style="display: block; margin-bottom: 5px;"><strong>From Date:</strong></label>
+        <input type="date" id="from-date" name="from-date" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+      </div>
+
+      <!-- To Date -->
+      <div>
+        <label for="to-date" style="display: block; margin-bottom: 5px;"><strong>To Date:</strong></label>
+        <input type="date" id="to-date" name="to-date" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+      </div>
+
+      <!-- From Time -->
+      <div>
+        <label for="from-time" style="display: block; margin-bottom: 5px;"><strong>From Time:</strong></label>
+        <input type="time" id="from-time" name="from-time" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+      </div>
+
+      <!-- To Time -->
+      <div>
+        <label for="to-time" style="display: block; margin-bottom: 5px;"><strong>To Time:</strong></label>
+        <input type="time" id="to-time" name="to-time" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+      </div>
+
+      <!-- Reason -->
+      <div>
+        <label for="reason" style="display: block; margin-bottom: 5px;"><strong>Reason:</strong></label>
+        <textarea id="reason" name="reason" rows="4" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; resize: none;"></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <div style="text-align: center; margin-top: 20px;">
+        <button type="submit" style="background-color: #1d4ed8; color: white; padding: 12px 25px; font-size: 16px; border: none; border-radius: 8px; cursor: pointer;">Submit Leave Request</button>
+      </div>
+
+    </form>
+
+  </div>
+
+</body>
+</html>
