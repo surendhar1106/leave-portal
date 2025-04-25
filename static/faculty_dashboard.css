@@ -1,76 +1,221 @@
+/* faculty_dashboard.css */
 body {
-    margin: 0;
-    padding: 40px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #1e3a8a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+  margin: 0;
+  padding: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e3a8a;
+  background-image: url(back.png);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.dashboard-container {
+  background-color: #ffffff;
+  color: #111827;
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 800px; /* Increased for better content display */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1e3a8a;
+  font-size: 1.8rem;
+}
+
+.info-box {
+  margin-bottom: 25px;
+  background-color: #f1f5f9;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.leave-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1e40af;
+  font-size: 1.4rem;
+}
+
+/* Enhanced Leave Request Cards */
+.leave-request {
+  background-color: #f8fafc;
+  border-left: 6px solid #3b82f6;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.leave-request:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.leave-request p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.leave-request strong {
+  color: #1e3a8a;
+}
+
+/* Status Indicators */
+.status-pending {
+  color: #d97706;
+  font-weight: 600;
+}
+
+.status-approved {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.status-rejected {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-left: 8px;
+}
+
+.status-pending .status-badge {
+  background-color: #fef3c7;
+}
+
+.status-approved .status-badge {
+  background-color: #dcfce7;
+}
+
+.status-rejected .status-badge {
+  background-color: #fee2e2;
+}
+
+/* Action Buttons */
+.action-buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+button.approve, button.reject {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+button.approve {
+  background-color: #16a34a;
+  color: white;
+}
+
+button.reject {
+  background-color: #dc2626;
+  color: white;
+}
+
+button.approve:hover {
+  background-color: #15803d;
+}
+
+button.reject:hover {
+  background-color: #b91c1c;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
   }
   
   .dashboard-container {
-    background-color: #ffffff;
-    color: #111827;
-    border-radius: 20px;
-    padding: 30px;
-    width: 90%;
-    max-width: 550px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  }
-  
-  .dashboard-title {
-    text-align: center;
-    margin-bottom: 25px;
-    color: #1e3a8a;
-  }
-  
-  .info-box {
-    margin-bottom: 25px;
-    background-color: #f1f5f9;
     padding: 20px;
-    border-radius: 12px;
-  }
-  
-  .leave-title {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #1e40af;
   }
   
   .leave-request {
-    background-color: #f8fafc;
-    border-left: 6px solid #3b82f6;
-    border-radius: 12px;
-    padding: 15px 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    padding: 15px;
   }
   
   .action-buttons {
-    margin-top: 12px;
+    flex-direction: column;
   }
   
-  button.approve {
-    background-color: #16a34a;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 6px;
-    margin-right: 10px;
-    cursor: pointer;
+  button.approve, button.reject {
+    width: 100%;
   }
-  
-  button.reject {
-    background-color: #dc2626;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    opacity: 0.9;
-  }
-  
+}
+
+/* Student Info Header */
+.student-info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.student-name {
+  font-weight: 600;
+  color: #1e3a8a;
+  font-size: 1.1rem;
+}
+
+.student-id {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.leave-request p strong {
+  font-weight: 600;
+  color: #0f172a;
+}
+/* Add these styles to your existing CSS */
+.action-buttons form {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.action-buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.approve {
+  background-color: #16a34a;
+  color: white;
+}
+
+.reject {
+  background-color: #dc2626;
+  color: white;
+}
+
+.approve:hover {
+  background-color: #15803d;
+}
+
+.reject:hover {
+  background-color: #b91c1c;
+}

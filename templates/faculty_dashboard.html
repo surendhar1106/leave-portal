@@ -8,7 +8,6 @@
 <body>
 
   <div class="dashboard-container">
-
     <h2 class="dashboard-title">Faculty Dashboard</h2>
 
     <!-- Faculty Info Section -->
@@ -20,41 +19,43 @@
     </div>
 
     <!-- Leave Requests Header -->
-    <h3 class="leave-title">Leave Requests</h3>
+    <h3 class="leave-title">Leave Requests from Your Students</h3>
 
-    <!-- Leave Request Items -->
+    {% for req in requests %}
     <div class="leave-request">
-      <p><strong>Name:</strong> Bharath</p>
-      <p><strong>From:</strong> 2025-04-10</p>
-      <p><strong>To:</strong> 2025-04-12</p>
-      <p><strong>Reason:</strong> Medical Checkup</p>
-      <div class="action-buttons">
-        <button class="approve">Approve</button>
-        <button class="reject">Reject</button>
+      
+      <!-- Student Info Header -->
+      <div class="student-info-header">
+        <span class="student-name">{{ req['student_name'] }}</span>
+        <span class="student-id">ID: {{ req['st_id'] }}</span>
       </div>
-    </div>
 
-    <div class="leave-request">
-      <p><strong>Name:</strong> Priya</p>
-      <p><strong>From:</strong> 2025-04-05</p>
-      <p><strong>To:</strong> 2025-04-07</p>
-      <p><strong>Reason:</strong> Family Event</p>
-      <div class="action-buttons">
-        <button class="approve">Approve</button>
-        <button class="reject">Reject</button>
-      </div>
-    </div>
+      <!-- Leave Details -->
+      <p><strong>Leave Type:</strong> {{ req['leave_type'] }}</p>
+      <p><strong>From:</strong> {{ req['from_date'] }} <strong>To:</strong> {{ req['to_date'] }}</p>
+      <p><strong>Reason:</strong> {{ req['reason'] }}</p>
+      <p>
+        <strong>Status:</strong>
+        <span class="status-{{ req['status'].lower() }}">
+          <span class="status-badge">{{ req['status'] }}</span>
+        </span>
+      </p>
 
-    <div class="leave-request">
-      <p><strong>Name:</strong> Karthik</p>
-      <p><strong>From:</strong> 2025-03-15</p>
-      <p><strong>To:</strong> 2025-03-18</p>
-      <p><strong>Reason:</strong> Personal</p>
+      <!-- Action Buttons -->
+      {% if req['status'] == 'Pending' %}
+      <!-- Replace your action buttons section with this -->
       <div class="action-buttons">
-        <button class="approve">Approve</button>
-        <button class="reject">Reject</button>
+        <form action="/approve/{{ req['id'] }}" method="POST" style="display: inline;">
+          <button type="submit" class="approve">✓ Approve</button>
+        </form>
+        <form action="/reject/{{ req['id'] }}" method="POST" style="display: inline;">
+          <button type="submit" class="reject">✗ Reject</button>
+        </form>
       </div>
+      {% endif %}
+
     </div>
+    {% endfor %}
 
   </div>
 
