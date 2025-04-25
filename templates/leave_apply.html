@@ -11,46 +11,46 @@
 
     <h2 class="form-header">Apply for Leave</h2>
 
-    <form class="leave-form">
+    <form action="/submit_leave" method="POST"  class="leave-form">
         <!-- Leave Type -->
       <div class="form-group">
         <label for="leave-type"><strong>Leave Type:</strong></label>
-        <select style="width: 105%;" id="leave-type" name="leave-type">
-          <option value="casual">Casual Leave</option>
-          <option value="sick">Sick Leave</option>
-          <option value="duty">On Duty</option>
-          <option value="emergency">Emergency Leave</option>
+        <select style="width: 105%;" id="leave-type" name="leave_type">
+          <option value="casual leave">Casual Leave</option>
+          <option value="sick leave">Sick Leave</option>
+          <option value="On duty">On Duty</option>
+          <option value="emergency leave">Emergency Leave</option>
         </select>
       </div>
 
       <!-- From Date -->
       <div class="form-group">
         <label for="from-date"><strong>From Date:</strong></label>
-        <input type="date" id="from-date" name="from-date">
+        <input type="date" id="from-date" name="from-date" required>
       </div>
 
       <!-- To Date -->
       <div class="form-group">
         <label for="to-date"><strong>To Date:</strong></label>
-        <input type="date" id="to-date" name="to-date">
+        <input type="date" id="to-date" name="to-date" required>
       </div>
 
       <!-- From Time -->
       <div class="form-group">
         <label for="from-time"><strong>From Time:</strong></label>
-        <input type="time" id="from-time" name="from-time">
+        <input type="time" id="from-time" name="from-time" required>
       </div>
 
       <!-- To Time -->
       <div class="form-group">
         <label for="to-time"><strong>To Time:</strong></label>
-        <input type="time" id="to-time" name="to-time">
+        <input type="time" id="to-time" name="to-time" required>
       </div>
 
       <!-- Reason -->
       <div class="form-group">
         <label for="reason"><strong>Reason:</strong></label>
-        <textarea id="reason" name="reason" rows="4"></textarea>
+        <textarea id="reason" name="reason" rows="4" required></textarea>
       </div>
 
       <!-- Submit Button -->

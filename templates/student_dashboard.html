@@ -21,42 +21,32 @@
 
     <!-- Leave History Header -->
     <h3 class="leave-history-header">Previous Leave Applications</h3>
-
-    <!-- Leave Application 1 -->
+    {% for leave in records %}
     <div class="leave-application">
-      <p><strong>From:</strong> 2025-04-01</p>
-      <p><strong>To:</strong> 2025-04-03</p>
-      <p><strong>Reason:</strong> Health Issues</p>
-      <p><strong>Status:</strong> <span class="leave-status-approved"><strong>Approved</strong></span></p>
+      <p><strong>Leave Type:</strong>{{leave[1]}}</p>
+      <p><strong>From:</strong> {{ leave[2] }}</p>
+      <p><strong>To:</strong> {{ leave[3] }}</p>
+      <p><strong>From Time:</strong>{{leave[4]}}</p>
+      <p><strong>To Time:</strong>{{leave[5]}}</p>
+      <p><strong>Reason:</strong> {{ leave[6] }}</p>
+      <p><strong>Status:</strong>
+        {% if leave[7] == 'Approved' %}
+          <span class="leave-status-approved"><strong>{{ leave[7] }}</strong></span>
+        {% elif leave[7] == 'Rejected' %}
+          <span class="leave-status-rejected"><strong>{{ leave[7] }}</strong></span>
+        {% else %}
+          <span class="leave-status-pending"><strong>{{ leave[7] }}</strong></span>
+        {% endif %}
+      </p>
     </div>
-
-    <!-- Leave Application 2 -->
-    <div class="leave-application">
-      <p><strong>From:</strong> 2025-03-18</p>
-      <p><strong>To:</strong> 2025-03-19</p>
-      <p><strong>Reason:</strong> Family Emergency</p>
-      <p><strong>Status:</strong> <span class="leave-status-approved"><strong>Approved</strong></span></p>
-    </div>
-
-    <!-- Leave Application 3 -->
-    <div class="leave-application">
-      <p><strong>From:</strong> 2025-02-05</p>
-      <p><strong>To:</strong> 2025-02-07</p>
-      <p><strong>Reason:</strong> Project Work</p>
-      <p><strong>Status:</strong> <span class="leave-status-rejected"><strong>Rejected</strong></span></p>
-    </div>
-
-    <!-- Leave Application 4 -->
-    <div class="leave-application">
-      <p><strong>From:</strong> 2025-01-10</p>
-      <p><strong>To:</strong> 2025-01-11</p>
-      <p><strong>Reason:</strong> Travel</p>
-      <p><strong>Status:</strong> <span class="leave-status-approved"><strong>Approved</strong></span></p>
-    </div>
+  {% else %}
+    <p>No leave applications found.</p>
+  {% endfor %}
+   
 
     <!-- Apply Leave Button -->
     <div class="apply-leave-btn">
-      <button>Apply for Leave</button>
+      <button onclick="window.location.href='/leave_page'">Apply for Leave</button>
     </div>
 
   </div>
