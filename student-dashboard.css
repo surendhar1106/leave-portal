@@ -12,6 +12,8 @@
 
   .dashboard-container {
     background-color: #ffffff;
+    background-image: url(back.png);
+    background-size: cover;
     color: #111827;
     border-radius: 20px;
     padding: 30px;
