@@ -257,7 +257,7 @@ def faculty_dashboard():
             ORDER BY l.status, l.from_date DESC
         ''', (f_id,)).fetchall()
                     print(leave_requests)
-                 return render_template('faculty_dashboard.html', requests=leave_requests)
+                 return render_template('faculty_dashboard.html', requests=leave_requests,f=finfo)
             except Exception as e:
                 print('no record found because : ',e)
                 return render_template('faculty_dashboard.html',f_info = None, er = "no records found!")
