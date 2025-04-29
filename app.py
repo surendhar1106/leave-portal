@@ -234,6 +234,7 @@ def faculty_dashboard():
     print(session['flogged_in'])
     if 'flogged_in' in session and session['flogged_in']:
          with sqlite3.connect('database.db') as conn:
+            conn.row_factory = sqlite3.Row
             global finfo
             print(f_id)
             try:
@@ -257,10 +258,10 @@ def faculty_dashboard():
             ORDER BY l.status, l.from_date DESC
         ''', (f_id,)).fetchall()
                     print(leave_requests)
-                 return render_template('faculty_dashboard.html', requests=leave_requests,f=finfo)
+                 return render_template('faculty_dashboard.html', requests=leave_requests,f_info = finfo)
             except Exception as e:
                 print('no record found because : ',e)
-                return render_template('faculty_dashboard.html',f_info = None, er = "no records found!")
+                return render_template('faculty_dashboard.html',requests=[],f_info = None, er = "no records found!")
 
     else:
         return redirect(url_for('staff_login_page'))

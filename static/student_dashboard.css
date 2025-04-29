@@ -75,3 +75,21 @@
     border-radius: 8px;
     cursor: pointer;
   }
+
+  .back-button-container {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.back-button {
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background-color: #1d4ed8;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}

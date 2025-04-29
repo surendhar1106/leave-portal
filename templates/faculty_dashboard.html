@@ -12,8 +12,10 @@
 
     <!-- Faculty Info Section -->
     <div class="info-box">
-      <p><strong>Faculty Name:</strong>{{ f[1] }}</p>
-      <p><strong>Staff ID:</strong>{{ f[2] }}</p>
+      {%if f_info%}
+      <p><strong>Faculty Name:</strong>{{ f_info['name'] }}</p>
+      <p><strong>Staff ID:</strong>{{ f_info['faculty_id'] }}</p>
+      {%endif%}
     </div>
 
     <!-- Leave Requests Header -->
